@@ -1,12 +1,19 @@
 ﻿using LeetCode.Interface;
 using Newtonsoft.Json;
 
-Console.WriteLine("Give me some leet question numbers (ex: 946, 316)");
-var input = Console.ReadLine();
-Console.WriteLine();
+var input = default(string);
+//input = "856";
+
 if (input == null)
 {
-    Console.WriteLine("Invalid input");
+    Console.WriteLine("Give me some leet question numbers (ex: 946, 316)");
+    input = Console.ReadLine();
+    Console.WriteLine();
+    if (input == null)
+    {
+        Console.WriteLine("Invalid input");
+        return;
+    }
 }
 var questionNumbers = input!.Split(',').Select(d => d.Trim());
 var funcs = questionNumbers.Select(d => new { qn = d, instance = GetLeet(d) });
