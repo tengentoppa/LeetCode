@@ -1,19 +1,18 @@
 ﻿
 using LeetCode.Interface;
+using System.Text;
 
-namespace Solutions.S946
+namespace Solutions.S1249
 {
     public class Solution : ILeet
     {
-        readonly int[] pushed = new int[] { 1, 2, 3, 4, 5 };
-        readonly int[] popped = new int[] { 4, 5, 3, 2, 1 };
+        readonly string str = "))(((123)432)";
 
         public object Input
         {
             get => new
             {
-                pushed,
-                popped
+                str,
             };
         }
 
@@ -26,35 +25,45 @@ namespace Solutions.S946
         {
             ISolution solution = new Solution1();
 
-            return solution.MinRemoveToMakeValid(pushed, popped);
+            return solution.MinRemoveToMakeValid("))(((123)432)");
         }
     }
     public class Solution1 : ISolution
     {
-        public bool MinRemoveToMakeValid(int[] pushed, int[] popped)
+        public string MinRemoveToMakeValid(string s)
         {
-            var stack = new Stack<int>();
-            var len = pushed.Length;
-            var indexPopped = 0;
-
-            foreach (var p in pushed)
+            var stack = new Stack<KeyValuePair<int, char>>();
+            for (int i = 0; i < s.Length; i++)
             {
-                stack.Push(p);
-
-                while (stack.Any() &&
-                    stack.Peek() == popped[indexPopped])
+                var c = s[i];
+                if (c == ')')
                 {
-                    stack.Pop();
-                    ++indexPopped;
+                    if (stack.Any() && stack.Peek().Value == '(')
+                    {
+                        stack.Pop();
+                    }
+                    else
+                    {
+                        stack.Push(new KeyValuePair<int, char>(i, ')'));
+                    }
+                }
+                else if (c == '(')
+                {
+                    stack.Push(new KeyValuePair<int, char>(i, '('));
                 }
             }
 
-            return indexPopped == len;
+            var result = new StringBuilder(s);
+            foreach (var stc in stack)
+            {
+                result.Remove(stc.Key, 1);
+            }
+            return result.ToString();
         }
     }
 
     public interface ISolution
     {
-        bool MinRemoveToMakeValid(int[] pushed, int[] popped);
+        string MinRemoveToMakeValid(string s);
     }
 }

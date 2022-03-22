@@ -2,7 +2,7 @@
 using LeetCode.Interface;
 using System.Text;
 
-namespace Solutions.S316
+namespace Solutions.S0316
 {
     public class Solution : ILeet
     {

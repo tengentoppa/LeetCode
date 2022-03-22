@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 
 var input = default(string);
-//input = "856";
+input = "1663";
 
 if (input == null)
 {
@@ -15,7 +15,7 @@ if (input == null)
         return;
     }
 }
-var questionNumbers = input!.Split(',').Select(d => d.Trim());
+var questionNumbers = input!.Split(',').Select(d => d.Trim().PadLeft(4, '0'));
 var funcs = questionNumbers.Select(d => new { qn = d, instance = GetLeet(d) });
 var unsupported = funcs.Where(d => d.instance == null);
 var supported = funcs.Where(d => d.instance != null);

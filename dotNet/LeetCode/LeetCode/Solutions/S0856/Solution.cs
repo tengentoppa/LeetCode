@@ -1,7 +1,7 @@
 ﻿
 using LeetCode.Interface;
 
-namespace Solutions.S856
+namespace Solutions.S0856
 {
     public class Solution : ILeet
     {
