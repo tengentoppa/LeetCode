@@ -34,7 +34,6 @@ namespace Solutions.S1029
         public int TwoCitySchedCost(int[][] costs)
         {
             var sCosts = costs.OrderBy(d => d[0] - d[1]);
-            Console.WriteLine(JsonConvert.SerializeObject(sCosts));
             var halfLen = costs.Length / 2;
             return sCosts.Take(halfLen).Sum(d => d[0]) + sCosts.Skip(halfLen).Sum(d => d[1]);
         }
