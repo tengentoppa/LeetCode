@@ -1,11 +1,14 @@
 ﻿using LeetCode.Interface;
 using Newtonsoft.Json;
+using System.Reflection;
+using System.Text.RegularExpressions;
 
 var input = default(string);
-input = "1663";
+//input = "3";
 
 if (input == null)
 {
+    Console.WriteLine($"Done list: {string.Join(", ", GetSolutionList() ?? new List<string>())}");
     Console.WriteLine("Give me some leet question numbers (ex: 946, 316)");
     input = Console.ReadLine();
     Console.WriteLine();
@@ -35,9 +38,19 @@ foreach (var i in supported)
         $"Output: {JsonConvert.SerializeObject(instance!.Output)}");
 }
 
+static IEnumerable<string>? GetSolutionList()
+{
+    return Assembly.GetAssembly(typeof(ILeet))?
+        .GetTypes()
+        .Select(d => Regex.Match(d?.FullName ?? "", "^Solutions\\.S([\\d]{4}).Solution$"))
+        .Select(d => d.Success ? d.Result("$1") : string.Empty)
+        .Where(d => d != string.Empty)
+        .OrderBy(d => d)
+        .Select(d => d.TrimStart('0'));
+}
+
 static ILeet? GetLeet(string questionNumber)
 {
-
     var t = Type.GetType($"Solutions.S{questionNumber}.Solution");
     if (t == null)
     {
