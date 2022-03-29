@@ -3,6 +3,13 @@ using LeetCode.Interface;
 
 namespace Solutions.S0287
 {
+    public class Infos : ILeetInfo
+    {
+        public string Problem => "Find the Duplicate Number";
+
+        public TopicType[] Topics => new TopicType[] { TopicType.Array, TopicType.Two_Pointers, TopicType.Binary_Search, TopicType.Binary_Search };
+    }
+
     public class Solution : ILeet
     {
         readonly int[] nums = new int[] { 1, 3, 4, 2, 2 };
