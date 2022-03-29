@@ -8,7 +8,10 @@ var input = default(string);
 
 if (input == null)
 {
-    Console.WriteLine($"Done list: {string.Join(", ", GetSolutionList() ?? new List<string>())}");
+    var doneList = GetSolutionList() ?? new List<string>();
+
+    //Console.WriteLine($"Done list: {string.Join(", ", doneList)}");
+    Console.WriteLine($"Done list:\n{string.Join($"\n{new string('-', 40)}", GetSolutionInfos(doneList))}");
     Console.WriteLine("Give me some leet question numbers (ex: 946, 316)");
     input = Console.ReadLine();
     Console.WriteLine();
@@ -36,6 +39,16 @@ foreach (var i in supported)
     Console.WriteLine($"leet question number: {i.qn}\n" +
         $"Input: {JsonConvert.SerializeObject(instance!.Input)}\n" +
         $"Output: {JsonConvert.SerializeObject(instance!.Output)}");
+}
+
+static IEnumerable<string> GetSolutionInfos(IEnumerable<string> problemNums)
+{
+    return problemNums
+        .Select(d => Type.GetType($"Solutions.S{d.PadLeft(4, '0')}.Infos"))
+        .Where(d => d != null)
+        .Select(d => (ILeetInfo)Activator.CreateInstance(d!)!)
+        .Zip(problemNums)
+        .Select(d => $"{d.Second}. {d.First.Problem}\nTopics: {string.Join(", ", d.First.Topics)}");
 }
 
 static IEnumerable<string>? GetSolutionList()
