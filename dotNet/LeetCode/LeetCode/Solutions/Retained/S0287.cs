@@ -3,7 +3,7 @@ using LeetCode.Interface;
 
 namespace Solutions.S0287
 {
-    public class Infos : ILeetInfo
+    public class Info : ILeetInfo
     {
         public string Problem => "Find the Duplicate Number";
 

@@ -4,6 +4,16 @@ using System.Text;
 
 namespace Solutions.S0001
 {
+    public class Info : ILeetInfo
+    {
+        public string Problem => "Two Sum";
+
+        public TopicType[] Topics => new TopicType[]
+        {
+            TopicType.Array,
+            TopicType.HashTable
+        };
+    }
     public class Solution : ILeet
     {
         readonly int[] nums = { 1, 2, 3, 3 };

@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace Solutions.S0074
 {
-    public class Infos : ILeetInfo
+    public class Info : ILeetInfo
     {
         public string Problem => "Search a 2D Matrix";
 

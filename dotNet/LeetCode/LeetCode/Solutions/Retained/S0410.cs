@@ -3,6 +3,17 @@ using LeetCode.Interface;
 
 namespace Solutions.S0410
 {
+    public class Info : ILeetInfo
+    {
+        public string Problem => "Split Array Largest Sum";
+
+        public TopicType[] Topics => new TopicType[] {
+            TopicType.Array,
+            TopicType.BinarySearch,
+            TopicType.DynamicProgramming,
+            TopicType.Greedy };
+    }
+
     public class Solution : ILeet
     {
         readonly int[] nums = new int[] { 7, 2, 5, 10, 8 };
