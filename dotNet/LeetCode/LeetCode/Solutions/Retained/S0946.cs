@@ -3,6 +3,20 @@ using LeetCode.Interface;
 
 namespace Solutions.S0946
 {
+    public class Info : ILeetInfo
+    {
+        public string Problem => "Validate Stack Sequences";
+
+        public Difficulty Difficulty => Difficulty.Medium;
+
+        public TopicType[] Topics => new TopicType[]
+        {
+            TopicType.Array,
+            TopicType.Stack,
+            TopicType.Simulation
+        };
+    }
+
     public class Solution : ILeet
     {
         readonly int[] pushed = new int[] { 1, 2, 3, 4, 5 };

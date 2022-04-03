@@ -8,6 +8,8 @@ namespace Solutions.S0031
     {
         public string Problem => "Binary Search";
 
+        public Difficulty Difficulty => Difficulty.Medium;
+
         public TopicType[] Topics => new TopicType[]
         {
             TopicType.Array,

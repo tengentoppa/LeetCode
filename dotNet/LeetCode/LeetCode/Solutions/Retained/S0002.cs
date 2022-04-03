@@ -3,6 +3,20 @@ using LeetCode.Interface;
 
 namespace Solutions.S0002
 {
+    public class Info : ILeetInfo
+    {
+        public string Problem => "Add Two Numbers";
+
+        public Difficulty Difficulty => Difficulty.Medium;
+
+        public TopicType[] Topics => new TopicType[]
+        {
+            TopicType.LinkedList,
+            TopicType.Math,
+            TopicType.Recursion
+        };
+    }
+
     public class Solution : ILeet
     {
         readonly int[] L1 = { 9, 9, 9, 9, 9, 9, 9 };

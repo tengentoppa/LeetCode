@@ -3,6 +3,21 @@ using LeetCode.Interface;
 
 namespace Solutions.S0895
 {
+    public class Info : ILeetInfo
+    {
+        public string Problem => "Maximum Frequency Stack";
+
+        public Difficulty Difficulty => Difficulty.Hard;
+
+        public TopicType[] Topics => new TopicType[]
+        {
+            TopicType.HashTable,
+            TopicType.Stack,
+            TopicType.Design,
+            TopicType.OrderedSet
+        };
+    }
+
     public class Solution : ILeet
     {
         readonly string[] commands = new string[] { "FreqStack", "push", "push", "push", "push", "push", "push", "pop", "pop", "pop", "pop" };

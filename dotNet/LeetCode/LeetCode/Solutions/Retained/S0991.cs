@@ -3,6 +3,19 @@ using LeetCode.Interface;
 
 namespace Solutions.S0991
 {
+    public class Info : ILeetInfo
+    {
+        public string Problem => "Broken Calculator";
+
+        public Difficulty Difficulty => Difficulty.Medium;
+
+        public TopicType[] Topics => new TopicType[]
+        {
+            TopicType.Math,
+            TopicType.Greedy
+        };
+    }
+
     public class Solution : ILeet
     {
         //readonly int n = (int)Math.Pow(10, 5);

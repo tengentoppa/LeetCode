@@ -7,6 +7,8 @@ namespace Solutions.S0287
     {
         public string Problem => "Find the Duplicate Number";
 
+        public Difficulty Difficulty => Difficulty.Medium;
+
         public TopicType[] Topics => new TopicType[] {
             TopicType.Array,
             TopicType.TwoPointers,

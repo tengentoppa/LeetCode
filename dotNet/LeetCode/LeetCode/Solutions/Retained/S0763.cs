@@ -3,6 +3,21 @@ using LeetCode.Interface;
 
 namespace Solutions.S0763
 {
+    public class Info : ILeetInfo
+    {
+        public string Problem => "Partition Labels";
+
+        public Difficulty Difficulty => Difficulty.Medium;
+
+        public TopicType[] Topics => new TopicType[]
+        {
+            TopicType.HashTable,
+            TopicType.TwoPointers,
+            TopicType.String,
+            TopicType.Greedy
+        };
+    }
+
     public class Solution : ILeet
     {
         readonly string str = "ababcbacadefegdehijhklij";

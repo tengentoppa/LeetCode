@@ -3,6 +3,19 @@ using LeetCode.Interface;
 
 namespace Solutions.S1663
 {
+    public class Info : ILeetInfo
+    {
+        public string Problem => "Smallest String With A Given Numeric Value";
+
+        public Difficulty Difficulty => Difficulty.Medium;
+
+        public TopicType[] Topics => new TopicType[]
+        {
+            TopicType.String,
+            TopicType.Greedy
+        };
+    }
+
     public class Solution : ILeet
     {
         //readonly int n = (int)Math.Pow(10, 5);

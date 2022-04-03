@@ -3,6 +3,20 @@ using LeetCode.Interface;
 
 namespace Solutions.S0003
 {
+    public class Info : ILeetInfo
+    {
+        public string Problem => "Longest Substring Without Repeating Characters";
+
+        public Difficulty Difficulty => Difficulty.Medium;
+
+        public TopicType[] Topics => new TopicType[]
+        {
+            TopicType.HashTable,
+            TopicType.String,
+            TopicType.SlidingWindow
+        };
+    }
+
     public class Solution : ILeet
     {
         readonly string s = "abcabcbb";

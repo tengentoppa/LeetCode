@@ -3,6 +3,21 @@ using LeetCode.Interface;
 
 namespace Solutions.S0881
 {
+    public class Info : ILeetInfo
+    {
+        public string Problem => "Boats to Save People";
+
+        public Difficulty Difficulty => Difficulty.Medium;
+
+        public TopicType[] Topics => new TopicType[]
+        {
+            TopicType.Array,
+            TopicType.TwoPointers,
+            TopicType.Greedy,
+            TopicType.Sorting
+        };
+    }
+
     public class Solution : ILeet
     {
         readonly int[] people = { 1, 1, 1 };

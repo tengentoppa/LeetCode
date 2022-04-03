@@ -4,6 +4,19 @@ using LeetCode.Interface;
 
 namespace Solutions.S1007
 {
+    public class Info : ILeetInfo
+    {
+        public string Problem => "Minimum Domino Rotations For Equal Row";
+
+        public Difficulty Difficulty => Difficulty.Medium;
+
+        public TopicType[] Topics => new TopicType[]
+        {
+            TopicType.Array,
+            TopicType.Greedy
+        };
+    }
+
     public class Solution : ILeet
     {
         readonly int[] tops = new int[] { 2, 1, 2, 4, 2, 2 };

@@ -7,6 +7,8 @@ namespace Solutions.S0856
     {
         public string Problem => "Score of Parentheses";
 
+        public Difficulty Difficulty => Difficulty.Medium;
+
         public TopicType[] Topics => new TopicType[]
         {
             TopicType.String,

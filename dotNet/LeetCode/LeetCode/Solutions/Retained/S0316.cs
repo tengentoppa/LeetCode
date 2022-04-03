@@ -4,6 +4,21 @@ using System.Text;
 
 namespace Solutions.S0316
 {
+    public class Info : ILeetInfo
+    {
+        public string Problem => "Remove Duplicate Letters";
+
+        public Difficulty Difficulty => Difficulty.Medium;
+
+        public TopicType[] Topics => new TopicType[]
+        {
+            TopicType.String,
+            TopicType.Stack,
+            TopicType.Greedy,
+            TopicType.MonotonicStack
+        };
+    }
+
     public class Solution : ILeet
     {
         readonly string str = "cbacdcbc";

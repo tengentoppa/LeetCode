@@ -4,6 +4,19 @@ using System.Text;
 
 namespace Solutions.S1249
 {
+    public class Info : ILeetInfo
+    {
+        public string Problem => "Minimum Remove to Make Valid Parentheses";
+
+        public Difficulty Difficulty => Difficulty.Medium;
+
+        public TopicType[] Topics => new TopicType[]
+        {
+            TopicType.String,
+            TopicType.Stack
+        };
+    }
+
     public class Solution : ILeet
     {
         readonly string str = "))(((123)432)";

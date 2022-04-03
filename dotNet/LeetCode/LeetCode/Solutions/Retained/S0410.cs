@@ -7,6 +7,8 @@ namespace Solutions.S0410
     {
         public string Problem => "Split Array Largest Sum";
 
+        public Difficulty Difficulty => Difficulty.Hard;
+
         public TopicType[] Topics => new TopicType[] {
             TopicType.Array,
             TopicType.BinarySearch,

@@ -7,6 +7,8 @@ namespace Solutions.S0680
     {
         public string Problem => "Valid Palindrome II";
 
+        public Difficulty Difficulty => Difficulty.Easy;
+
         public TopicType[] Topics => new TopicType[]
         {
             TopicType.TwoPointers,

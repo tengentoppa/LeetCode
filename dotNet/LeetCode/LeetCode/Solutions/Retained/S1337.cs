@@ -3,6 +3,22 @@ using LeetCode.Interface;
 
 namespace Solutions.S1337
 {
+    public class Info : ILeetInfo
+    {
+        public string Problem => "The K Weakest Rows in a Matrix";
+
+        public Difficulty Difficulty => Difficulty.Easy;
+
+        public TopicType[] Topics => new TopicType[]
+        {
+            TopicType.Array,
+            TopicType.BinarySearch,
+            TopicType.Sorting,
+            TopicType.Heap_PriorityQueue,
+            TopicType.Matrix
+        };
+    }
+
     public class Solution : ILeet
     {
         readonly int[][] mat = {

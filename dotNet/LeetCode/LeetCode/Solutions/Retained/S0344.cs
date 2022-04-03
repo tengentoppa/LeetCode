@@ -7,6 +7,8 @@ namespace Solutions.S0344
     {
         public string Problem => "Reverse String";
 
+        public Difficulty Difficulty => Difficulty.Easy;
+
         public TopicType[] Topics => new TopicType[]
         {
             TopicType.TwoPointers,

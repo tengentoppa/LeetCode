@@ -8,6 +8,8 @@ namespace Solutions.S0074
     {
         public string Problem => "Search a 2D Matrix";
 
+        public Difficulty Difficulty => Difficulty.Medium;
+
         public TopicType[] Topics => new TopicType[] {
             TopicType.Array,
             TopicType.BinarySearch,

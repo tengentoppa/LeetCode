@@ -3,6 +3,19 @@ using LeetCode.Interface;
 
 namespace Solutions.S0081
 {
+    public class Info : ILeetInfo
+    {
+        public string Problem => "Search in Rotated Sorted Array II";
+
+        public Difficulty Difficulty => Difficulty.Medium;
+
+        public TopicType[] Topics => new TopicType[]
+        {
+            TopicType.Array,
+            TopicType.BinarySearch
+        };
+    }
+
     public class Solution : ILeet
     {
         readonly int[] nums = new int[] { 2, 5, 6, 0, 0, 1, 2 };

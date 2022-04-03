@@ -1,12 +1,13 @@
 ﻿
 using LeetCode.Interface;
-using System.Text;
 
 namespace Solutions.S0001
 {
     public class Info : ILeetInfo
     {
         public string Problem => "Two Sum";
+
+        public Difficulty Difficulty => Difficulty.Easy;
 
         public TopicType[] Topics => new TopicType[]
         {

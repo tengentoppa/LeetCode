@@ -5,6 +5,20 @@ using System.Text;
 
 namespace Solutions.S1029
 {
+    public class Info : ILeetInfo
+    {
+        public string Problem => "Two City Scheduling";
+
+        public Difficulty Difficulty => Difficulty.Medium;
+
+        public TopicType[] Topics => new TopicType[]
+        {
+            TopicType.Array,
+            TopicType.Greedy,
+            TopicType.Sorting
+        };
+    }
+
     public class Solution : ILeet
     {
         private readonly int[][] costs = JsonConvert.DeserializeObject<int[][]>("[[515,563],[451,713],[537,709],[343,819],[855,779],[457,60],[650,359],[631,42]]");

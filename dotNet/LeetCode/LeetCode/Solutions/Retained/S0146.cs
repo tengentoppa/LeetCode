@@ -4,6 +4,21 @@ using Newtonsoft.Json;
 
 namespace Solutions.S0146
 {
+    public class Info : ILeetInfo
+    {
+        public string Problem => "LRU Cache";
+
+        public Difficulty Difficulty => Difficulty.Medium;
+
+        public TopicType[] Topics => new TopicType[]
+        {
+            TopicType.HashTable,
+            TopicType.LinkedList,
+            TopicType.Design,
+            TopicType.Doubly_LinkedList
+        };
+    }
+
     public class Solution : ILeet
     {
         readonly string[] commands = new string[] { "LRUCache", "put", "put", "get", "put", "get", "put", "get", "get", "get" };

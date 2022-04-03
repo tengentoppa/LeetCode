@@ -8,6 +8,8 @@ namespace Solutions.S0394
     {
         public string Problem => "Decode String";
 
+        public Difficulty Difficulty => Difficulty.Medium;
+
         public TopicType[] Topics => new TopicType[]
         {
             TopicType.String,
