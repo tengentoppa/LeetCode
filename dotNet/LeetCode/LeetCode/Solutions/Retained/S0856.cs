@@ -3,6 +3,16 @@ using LeetCode.Interface;
 
 namespace Solutions.S0856
 {
+    public class Info : ILeetInfo
+    {
+        public string Problem => "Score of Parentheses";
+
+        public TopicType[] Topics => new TopicType[]
+        {
+            TopicType.String,
+            TopicType.Stack
+        };
+    }
     public class Solution : ILeet
     {
         readonly string str = "(((())()))";

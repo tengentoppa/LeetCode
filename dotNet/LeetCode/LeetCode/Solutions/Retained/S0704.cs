@@ -3,6 +3,17 @@ using LeetCode.Interface;
 
 namespace Solutions.S0704
 {
+    public class Info : ILeetInfo
+    {
+        public string Problem => "Binary Search";
+
+        public TopicType[] Topics => new TopicType[]
+        {
+            TopicType.Array,
+            TopicType.BinarySearch
+        };
+    }
+
     public class Solution : ILeet
     {
         readonly int[] nums = { -1, 0, 3, 5, 9, 12 };
