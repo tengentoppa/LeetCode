@@ -5,15 +5,15 @@ namespace Solutions.S0227
 {
     public class Info : ILeetInfo
     {
-        public string Problem => "Squares of a Sorted Array";
+        public string Problem => "Basic Calculator II";
 
-        public Difficulty Difficulty => Difficulty.Easy;
+        public Difficulty Difficulty => Difficulty.Medium;
 
         public TopicType[] Topics => new TopicType[]
         {
-            TopicType.Array,
-            TopicType.TwoPointers,
-            TopicType.Sorting
+            TopicType.Math,
+            TopicType.String,
+            TopicType.Stack
         };
     }
 
