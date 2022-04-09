@@ -6,7 +6,6 @@ namespace LeetCode.Interface
         string Problem { get; }
         TopicType[] Topics { get; }
         Difficulty Difficulty { get; }
-
     }
 
     public enum Difficulty
