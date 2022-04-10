@@ -1,5 +1,7 @@
 ﻿
+using LeetCode.Helper;
 using LeetCode.Interface;
+using LeetCode.Type;
 
 namespace Solutions.S0019
 {
@@ -38,16 +40,8 @@ namespace Solutions.S0019
         public object Run()
         {
             ISolution solution = new Solution1();
-            var head = new ListNode(this.head[0]);
-            var pre = head;
-            foreach (var i in this.head.Skip(1))
-            {
-                var tmp = new ListNode(i);
-                pre.next = tmp;
-                pre = tmp;
-            }
 
-            return solution.RemoveNthFromEnd(head, n);
+            return solution.RemoveNthFromEnd(head.ToListNode(), n);
         }
     }
     public class Solution1 : ISolution
@@ -86,16 +80,4 @@ namespace Solutions.S0019
     {
         ListNode RemoveNthFromEnd(ListNode head, int n);
     }
-
-    public class ListNode
-    {
-        public int val;
-        public ListNode next;
-        public ListNode(int val = 0, ListNode next = null)
-        {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
 }

@@ -1,5 +1,7 @@
 ﻿
+using LeetCode.Helper;
 using LeetCode.Interface;
+using LeetCode.Type;
 using Newtonsoft.Json;
 
 namespace Solutions.S1721
@@ -39,16 +41,8 @@ namespace Solutions.S1721
         public object Run()
         {
             ISolution solution = new Solution1();
-            var listNode = new ListNode(input[0]);
-            var pre = listNode;
-            foreach (var i in input.Skip(1))
-            {
-                var tmp = new ListNode(i);
-                pre.next = tmp;
-                pre = tmp;
-            }
 
-            return solution.SwapNodes(listNode, k);
+            return solution.SwapNodes(input.ToListNode(), k);
         }
     }
     public class Solution1 : ISolution
@@ -122,16 +116,4 @@ namespace Solutions.S1721
     {
         ListNode SwapNodes(ListNode head, int k);
     }
-
-    public class ListNode
-    {
-        public int val;
-        public ListNode next;
-        public ListNode(int val = 0, ListNode next = null)
-        {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
 }

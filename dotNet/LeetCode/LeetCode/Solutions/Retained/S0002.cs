@@ -1,5 +1,6 @@
 ﻿
 using LeetCode.Interface;
+using LeetCode.Type;
 
 namespace Solutions.S0002
 {
@@ -85,16 +86,4 @@ namespace Solutions.S0002
     {
         ListNode AddTwoNumbers(ListNode l1, ListNode l2);
     }
-
-    public class ListNode
-    {
-        public int val;
-        public ListNode next;
-        public ListNode(int val = 0, ListNode next = null)
-        {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
 }
